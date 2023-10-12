@@ -66,10 +66,13 @@
     <script>
         function codificar(cadena, texto) {
             let res = '';
+            //convertir a mayusculas
             texto = texto.toUpperCase();
             for (let i = 0; i < texto.length; i++) {
+                 //obtener la pscion
                 let caracter = texto.charAt(i);
                 let posicion = cadena.indexOf(caracter);
+                //verificar si existen y hacer la operacion correspondiente
                 if (posicion === -1) {
                     res += caracter;
                 } else {
@@ -77,15 +80,19 @@
                     res += cadena.charAt(nuevaPos);
                 }
             }
+            //devuelve el resultado
             return res;
         }
 
         function descodificar(cadena, texto) {
             let res = '';
+                //convertir a mayusculas
             texto = texto.toUpperCase();
             for (let i = 0; i < texto.length; i++) {
+                //obtener la pscion
                 let caracter = texto.charAt(i);
                 let posicion = cadena.indexOf(caracter);
+                //verificar si existen y hacer la operacion correspondiente
                 if (posicion === -1) {
                     res += caracter;
                 } else {
@@ -93,6 +100,7 @@
                     res += cadena.charAt(nuevaPos);
                 }
             }
+            //devuelve el resultado
             return res;
         }
 
